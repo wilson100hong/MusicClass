@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="u6K-sK-aVP">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Students-->
+        <scene sceneID="fcc-Wc-Qbs">
+            <objects>
+                <tableViewController id="ZxP-7Q-I58" customClass="StudentTableViewController" customModule="MusicClass" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6nB-gy-DZZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StudentTableViewCell" rowHeight="90" id="aEi-bi-cbW" customClass="StudentTableViewCell" customModule="MusicClass" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aEi-bi-cbW" id="CEI-kn-wqw">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="default_student_photo" translatesAutoresizingMaskIntoConstraints="NO" id="XVw-dT-JvS">
+                                            <rect key="frame" x="0.0" y="0.0" width="92" height="90"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Student Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfa-c2-lFd">
+                                            <rect key="frame" x="100" y="12" width="120" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="bfa-c2-lFd" id="CCl-Fq-h3a"/>
+                                    <outlet property="photoImageView" destination="XVw-dT-JvS" id="Tbt-KQ-qmC"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowStudent" id="rhT-Ur-hs8"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ZxP-7Q-I58" id="5ZJ-Cl-nLA"/>
+                            <outlet property="delegate" destination="ZxP-7Q-I58" id="py5-00-qZD"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Students" id="81n-Gb-92T">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="bJ9-yO-fs9">
+                            <connections>
+                                <segue destination="DaT-4E-wvT" kind="presentation" identifier="AddStudent" id="2bc-0h-vfx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SuA-zN-Kp7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-919.20000000000005" y="132.68365817091455"/>
+        </scene>
+        <!--New Student-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="StudentViewController" customModule="MusicClass" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yAE-2h-RM8"/>
+                        <viewControllerLayoutGuide type="bottom" id="wMF-Yk-TF8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFill" semanticContentAttribute="spatial" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ADh-0V-vAy">
+                                <rect key="frame" x="20" y="100" width="175" height="293"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView contentMode="scaleAspectFit" semanticContentAttribute="spatial" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" image="default_student_photo" translatesAutoresizingMaskIntoConstraints="NO" id="ui5-qy-WcO">
+                                        <rect key="frame" x="0.0" y="0.0" width="112" height="112"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="112" id="Eiy-KA-WZV"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="kPd-C1-luK" appends="YES" id="RV9-rt-fvW"/>
+                                        </connections>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Student Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fZ-Dw-9JT">
+                                        <rect key="frame" x="0.0" y="132" width="110" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="type student name here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yy8-J5-25O">
+                                        <rect key="frame" x="0.0" y="172.5" width="175" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Parent phone number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQl-jP-SLV">
+                                        <rect key="frame" x="0.0" y="222.5" width="165.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="123-456-789" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ryu-2Y-68n">
+                                        <rect key="frame" x="0.0" y="263" width="109" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="tel"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Student" id="Svk-D7-ohX">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="KP6-gg-4CQ">
+                            <connections>
+                                <action selector="cancel:" destination="BYZ-38-t0r" id="eWK-mW-JY2"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="lUA-5P-XG0">
+                            <connections>
+                                <segue destination="ix4-it-fTY" kind="unwind" unwindAction="unwindToStudentListWithSender:" id="lXR-w7-i10"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="nameLabel" destination="0fZ-Dw-9JT" id="H1z-gg-HQZ"/>
+                        <outlet property="nameTextField" destination="yy8-J5-25O" id="JCe-VO-Cws"/>
+                        <outlet property="phoneLabel" destination="iQl-jP-SLV" id="Aab-2p-cBi"/>
+                        <outlet property="phoneTextField" destination="ryu-2Y-68n" id="k9Z-Ju-N6n"/>
+                        <outlet property="photoImageView" destination="ui5-qy-WcO" id="YuC-Ib-oF5"/>
+                        <outlet property="saveButton" destination="lUA-5P-XG0" id="LcN-Kk-BwO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="ix4-it-fTY" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="kPd-C1-luK">
+                    <connections>
+                        <action selector="selectImageFromPhotoLIbrary:" destination="BYZ-38-t0r" id="EDl-JN-ETK"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="630.40000000000009" y="132.23388305847078"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CGl-DW-93f">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="u6K-sK-aVP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WWy-Wo-JQq">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZxP-7Q-I58" kind="relationship" relationship="rootViewController" id="9hA-uI-qbK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zut-Un-goq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1680" y="133.13343328335833"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7fx-yj-qdo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DaT-4E-wvT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vaY-kh-wCL">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="KIV-oU-VYM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aHa-yd-8Kv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-116.80000000000001" y="564.01799100449784"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="default_student_photo" width="112" height="112"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="rhT-Ur-hs8"/>
+    </inferredMetricsTieBreakers>
+</document>

@@ -9,16 +9,17 @@
 import UIKit
 import os.log
 
-class StudentViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
+class StudentViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource {
+    
     var student: Student?
     @IBOutlet weak var saveButton: UIBarButtonItem!
-    
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var phoneTextField: UITextField!
+    @IBOutlet weak var addClassButton: UIButton!
+    @IBOutlet weak var eventTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,7 +62,6 @@ class StudentViewController: UIViewController, UITextFieldDelegate, UIImagePicke
         student = Student(name: name, phone: phone, image: photo)
     }
     
-  
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -105,5 +105,23 @@ class StudentViewController: UIViewController, UITextFieldDelegate, UIImagePicke
         let text = nameTextField.text ?? ""
         saveButton.isEnabled = !text.isEmpty
     }
+    
+    //
+    // classTable
+    //
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 20
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cellId = "EventTableViewCell"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as? EventTableViewCell else {
+            fatalError("dequeueReusableCell failed")
+        }
+        
+        cell.testTextField.text = "hello"
+        return cell
+    }
+    
 }
 

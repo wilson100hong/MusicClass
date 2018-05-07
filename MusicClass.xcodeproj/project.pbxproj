@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B43DC39220A030400076CFA7 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43DC39120A030400076CFA7 /* EventTableViewCell.swift */; };
 		B473D2FC202057BE00020929 /* StudentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B473D2FB202057BE00020929 /* StudentTableViewController.swift */; };
 		B4A57E5A201C62E300B0F031 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A57E59201C62E300B0F031 /* AppDelegate.swift */; };
 		B4A57E5C201C62E300B0F031 /* StudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A57E5B201C62E300B0F031 /* StudentViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B43DC39120A030400076CFA7 /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		B473D2FB202057BE00020929 /* StudentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTableViewController.swift; sourceTree = "<group>"; };
 		B4A57E56201C62E300B0F031 /* MusicClass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicClass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4A57E59201C62E300B0F031 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,11 +64,12 @@
 			children = (
 				B4A57E73202052ED00B0F031 /* Assets.xcassets */,
 				B4A57E59201C62E300B0F031 /* AppDelegate.swift */,
-				B4A57E5B201C62E300B0F031 /* StudentViewController.swift */,
 				B4A57E5D201C62E300B0F031 /* Main.storyboard */,
 				B4A57E62201C62E300B0F031 /* LaunchScreen.storyboard */,
 				B4A57E65201C62E300B0F031 /* Info.plist */,
+				B43DC39120A030400076CFA7 /* EventTableViewCell.swift */,
 				B4A57E6F20204F7300B0F031 /* Student.swift */,
+				B4A57E5B201C62E300B0F031 /* StudentViewController.swift */,
 				B4A57E712020510C00B0F031 /* StudentTableViewCell.swift */,
 				B473D2FB202057BE00020929 /* StudentTableViewController.swift */,
 			);
@@ -147,6 +150,7 @@
 			files = (
 				B4A57E5C201C62E300B0F031 /* StudentViewController.swift in Sources */,
 				B4A57E722020510C00B0F031 /* StudentTableViewCell.swift in Sources */,
+				B43DC39220A030400076CFA7 /* EventTableViewCell.swift in Sources */,
 				B473D2FC202057BE00020929 /* StudentTableViewController.swift in Sources */,
 				B4A57E5A201C62E300B0F031 /* AppDelegate.swift in Sources */,
 				B4A57E7020204F7300B0F031 /* Student.swift in Sources */,

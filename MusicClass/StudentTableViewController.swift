@@ -13,21 +13,6 @@ import os.log
 class StudentTableViewController: UITableViewController {
     var students = [Student]()
     
-//    private func loadSampleStudents() {
-//        let image1 = UIImage(named: "student1_photo")
-//        let image2 = UIImage(named: "student2_photo")
-//        let image3 = UIImage(named: "student3_photo")
-//        guard let student1 = Student(name: "Korean Gay", phone: "123-456-7890", image: image1) else {
-//            fatalError("Failed in initialize student1")
-//        }
-//        guard let student2 = Student(name: "Happy Boy", phone: "888-888-8888", image: image2) else {
-//            fatalError("Failed in initialize student2")
-//        }
-//        guard let student3 = Student(name: "Cute Girl", phone: "000-000-1234", image: image3) else {
-//            fatalError("Failed in initialize student3")
-//        }
-//        students += [student1, student2, student3]
-//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -138,7 +123,7 @@ class StudentTableViewController: UITableViewController {
                 fatalError("Unexpected destination: \(segue.destination)")
             }
             guard let selectedStudentCell = sender as? StudentTableViewCell else {
-                fatalError("Unexpected sender: \(sender)")
+                fatalError("Unexpected sender: \(String(describing: sender))")
             }
             guard let indexPath = tableView.indexPath(for: selectedStudentCell) else {
                 fatalError("The selected cell is not being displayed by the table")
@@ -146,7 +131,7 @@ class StudentTableViewController: UITableViewController {
             let selectedStudent = students[indexPath.row]
             studentViewController.student = selectedStudent
         default:
-            fatalError("Unexpected Segue Identifier; \(segue.identifier)")
+            fatalError("Unexpected Segue Identifier; \(String(describing: segue.identifier))")
         }
     }
     
